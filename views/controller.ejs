@@ -7,7 +7,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style media="screen">
   body{
-    background-color: black;
+    background-color: gray;
     color:white;
     border: none;
   }
@@ -49,7 +49,12 @@
   }
   #X:hover{
     background-color: black;
-}
+  }
+  #chart{
+    border: none;
+    height: 500px;
+    width: 900px;
+  } 
 
 </style>
     <script>
@@ -63,14 +68,15 @@
     <title>Controll Test</title>
 </head>
 <body>
+  <iframe id="chart" src="test.ejs"></iframe>
+  <p><%= tas %> </p>
     <div class="container">
         <h2>Controll Test</h2>
-        <button type="button" class="btn btn-success" id='A'>모두 켜기</button>
-
+        <button type="button" class="btn btn-success" id='On'>모두 켜기</button>
         <button name="green" type="button" class="btn btn-warning" id='1'>초록색</button>
         <button name="red" type="button" class="btn btn-primary" id='2'>빨간색</button>
         <button name="blue" type="button" class="btn btn-success" id='3'>파랑색</button>
-        <button type="button" class="btn btn-default"  id='X'>모두 끄기</button>
+        <button type="button" class="btn btn-default"  id='Off'>모두 끄기</button>
         </div>
 </body>
 </html>
