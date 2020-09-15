@@ -5,7 +5,10 @@ var Excel = require('exceljs');
 var app = express();
 var path = require('path');
 var server = http.createServer(app);
-server.listen(2393);
+var port = 2393
+server.listen(port);
+
+console.log('sever is open at '+ port);
 
 // 시리얼 포트 설정
 // COM6 : 아두이노가 연결된 포트
@@ -40,7 +43,6 @@ app.get('/main.css', (req, res)=>{
 var na = new Array();
 var nn = new Array();
 var nt = new Array();
-// var td = new Date();
 var hsa = '0';
 
 
@@ -78,8 +80,7 @@ app.get('/controller/:id',function(req,res){
         na.push(0);
         nn.push("Off");
         nt.push(time);
-    }else if(hsa == 'L'){
-        na.push(111);  
+    }else if(hsa == 'L'){ 
         nn.push("LCD");
         nt.push(time);        
     }else if(hsa == 'A'){ 
@@ -96,10 +97,8 @@ app.get('/controller/:id',function(req,res){
         nt.push(time);
     }
 
-    // console.log(na);
     console.log(nn);
     console.log(nt);
-    // console.log(hsa);
        
     // for(i=i; i<nn.length; i++){
     //     Cell_time = nt[i];
@@ -122,3 +121,9 @@ app.get('/controller/:id',function(req,res){
 app.get('/saveExcel', function(req, res){
     xlsx.writeFile(book, 'export.xlsx');
 });
+
+app.get('/clear_arr', (req, res)=>{
+    na = new Array();
+    nn = new Array();
+    nt = new Array();
+})
