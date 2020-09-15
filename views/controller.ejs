@@ -2,45 +2,16 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style media="screen">
-  body{
-    background-color: rgb(255, 255, 255);
-    color:white;
-    border: none;
-  }
-  #A{
-    background-color: white;
-    color: grey;
-  }
-  #A:hover{
-    background-color: black;
-  }
-
-  #X{
-    background-color: grey;
-    color: white;
-    border: none;
-  }
-  #X:hover{
-    background-color: black;
-  }
-  #chart{
-    border: none;
-    height: 500px;
-    width: 900px;
-  } 
-
-</style>
     <script>
       $(document).ready(function(){
-          $("button").click(function(){
-              $.get("/controller/" + $(this).attr('id'), function(data, status){ });
-          });
+        $("button").click(function(){
+          $.get("/controller/" + $(this).attr('id'), function(data, status){ });
+        });
       });
-    </script>
+      </script>
     <meta charset="UTF-8">
     <title>Controll Test</title>
 </head>
@@ -49,13 +20,13 @@
     <div class="container">
         <h2>Controll Test</h2>
         <button type="button" class="btn btn-success" id='O'>ON</button>
-        <button type="button" class="btn btn-default"  id='X'>OFF</button>
-        <button type="button" class="btn btn-default"  id='L'>LCD</button>
+        <button type="button" class="btn btn-default" id='X'>OFF</button>
+        <button type="button" class="btn btn-default" id='L'>LCD</button>
 
-        <button type="button" class="btn btn-default"  id='A'>1</button>
-        <button type="button" class="btn btn-default"  id='B'>2</button>
-        <button type="button" class="btn btn-default"  id='C'>3</button>
-        <button type="button" class="btn btn-default"  id='D'>4</button>
+        <button type="button" class="btn btn-default" id='A'>1</button>
+        <button type="button" class="btn btn-default" id='B'>2</button>
+        <button type="button" class="btn btn-default" id='C'>3</button>
+        <button type="button" class="btn btn-default" id='D'>4</button>
     </div>
 </body>
 </html>

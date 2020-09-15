@@ -1,0 +1,46 @@
+body{
+    background-color: #282B28;
+    color:white;
+    border: none;
+    text-align: center;
+}
+
+#O{
+    background-color: #2191FB;
+    border: none;
+}
+#O:hover{
+    background-color: #83BCA9;
+}
+
+#X{
+    background-color: #BA274A;
+    border: none;
+}
+#X:hover{
+    background-color: #83BCA9;
+}
+
+button{
+    border: none;
+    width: 20%;
+    height: 20px;
+    color: white;
+    background-color: #3E5641;
+    position: relative;
+    border-radius: 40px 40px 40px 40px;
+}
+button:hover{
+    background-color: #83BCA9;
+}
+
+#chart{
+    border: none;
+    height: 500px;
+    width: 900px;
+    background-color: #83BCA9;
+    border-radius: 40px 40px 40px 40px;
+} 
+
+.container{
+}

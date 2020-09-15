@@ -9,19 +9,19 @@ server.listen(2393);
 
 // 시리얼 포트 설정
 // COM6 : 아두이노가 연결된 포트
-var serialPort  = require('serialport');
-// 아래 ####은 본인 아두이노의 시리얼 포트에 맞게 경로 입력하기
-var com3 = new serialPort('COM3',{
-    baudRate : 9600,
-    // defaults for Arduino serial communication
-    dataBits : 8,
-    parity : 'none',
-    stopBits: 1,
-    flowControl: false
-})
-com3.on('open', function () {
-    console.log('open serial communication');
-})
+// var serialPort  = require('serialport');
+// // 아래 ####은 본인 아두이노의 시리얼 포트에 맞게 경로 입력하기
+// var com3 = new serialPort('COM3',{
+//     baudRate : 9600,
+//     // defaults for Arduino serial communication
+//     dataBits : 8,
+//     parity : 'none',
+//     stopBits: 1,
+//     flowControl: false
+// })
+// com3.on('open', function () {
+//     console.log('open serial communication');
+// })
  
  
 // view engine setup
@@ -33,10 +33,14 @@ app.get('/',function(req,res) {
     res.render(__dirname + '/views/controller.ejs', {tas: '12345'});
 })
 
+app.get('/main.css', (req, res)=>{
+    res.sendFile(__dirname+'/views/main.css')
+})
+
 var na = new Array();
 var nn = new Array();
 var nt = new Array();
-var td = new Date();
+// var td = new Date();
 var hsa = '0';
 
 
@@ -59,8 +63,9 @@ app.get('/test.ejs',function(req,res) {
 });
 
 app.get('/controller/:id',function(req,res){
-    com3.write(req.params.id);
+    // com3.write(req.params.id);
     hsa = req.params.id;
+    var td = new Date();
     let hours = td.getHours();
     let min = td.getMinutes();
     var time = hours+':'+min;

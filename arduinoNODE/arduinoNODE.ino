@@ -21,40 +21,31 @@ void setup() {
   Serial.begin(9600);
   lcd.begin(16, 2);
     
-//  for(int i = 0 ; i < LED_NUM ; i++) {
-//    pinMode(ledArray[i], OUTPUT) ;
-//  }
+  for(int i = 0 ; i < LED_NUM ; i++) {
+    pinMode(ledArray[i], OUTPUT) ;
+  }
 
   pinMode(LED_BUILTIN, OUTPUT);
 }
  
 void loop() {
   lcd.setCursor(0,1);
-//  lcd.print("1234");
-
-  
   if(Serial.available()) {
-      char c = Serial.read();
-      Serial.write(c);
-      if(c == 'O') {
-            //for(int i = 0 ; i < LED_NUM ; i++) {
-            //    digitalWrite(ledArray[i], HIGH) ;
-            //}
-            pinMode(LED_BUILTIN,HIGH);
-            Serial.println(c);
-            lcd.print("A");
-           //return;
+    char c = Serial.read();
+    Serial.write(c);
+    if(c == 'O') {
+      for(int i = 0 ; i < LED_NUM ; i++) {
+        digitalWrite(ledArray[i], HIGH) ;
       }
-      else if(c == 'X') {
-            //for(int i = 0 ; i < LED_NUM ; i++) {
-            //    digitalWrite(ledArray[i], LOW) ;
-            //}
-           
-            pinMode(LED_BUILTIN,LOW);
-            lcd.print("X");
-//          return;
-      }
-      //int ledNum = c - '1';
-      //digitalWrite(ledArray[ledNum],!digitalRead(ledArray[ledNum])) ;
+      lcd.print("A");
+      return;
+    }else if(c == 'X') {
+      for(int i = 0 ; i < LED_NUM ; i++) {
+        digitalWrite(ledArray[i], LOW) ;
+    }
+        return;
+    }
+    int ledNum = c - '1';
+    digitalWrite(ledArray[ledNum],!digitalRead(ledArray[ledNum])) ;
   }
 }
