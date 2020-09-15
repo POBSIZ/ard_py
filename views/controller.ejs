@@ -7,41 +7,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style media="screen">
   body{
-    background-color: gray;
+    background-color: rgb(255, 255, 255);
     color:white;
     border: none;
   }
   #A{
     background-color: white;
     color: grey;
-    border: none;
   }
   #A:hover{
     background-color: black;
   }
-  button[name="green"]{
-    background-color: green;
-    border: none;
 
-  }
-  button[name="green"]:hover{
-    background-color: black;
-
-  }
-  button[name="red"]{
-    background-color: red;
-    border: none;
-  }
-  button[name="red"]:hover{
-    background-color: black;
-  }
-  button[name="blue"]{
-    background-color: blue;
-    border: none;
-  }
-  button[name="blue"]:hover{
-    background-color: black;
-  }
   #X{
     background-color: grey;
     color: white;
@@ -58,25 +35,27 @@
 
 </style>
     <script>
-    $(document).ready(function(){
-        $("button").click(function(){
-            $.get("/controller/" + $(this).attr('id'), function(data, status){ });
-        });
-    });
+      $(document).ready(function(){
+          $("button").click(function(){
+              $.get("/controller/" + $(this).attr('id'), function(data, status){ });
+          });
+      });
     </script>
     <meta charset="UTF-8">
     <title>Controll Test</title>
 </head>
 <body>
   <iframe id="chart" src="test.ejs"></iframe>
-  <p><%= tas %> </p>
     <div class="container">
         <h2>Controll Test</h2>
-        <button type="button" class="btn btn-success" id='On'>모두 켜기</button>
-        <button name="green" type="button" class="btn btn-warning" id='1'>초록색</button>
-        <button name="red" type="button" class="btn btn-primary" id='2'>빨간색</button>
-        <button name="blue" type="button" class="btn btn-success" id='3'>파랑색</button>
-        <button type="button" class="btn btn-default"  id='Off'>모두 끄기</button>
-        </div>
+        <button type="button" class="btn btn-success" id='O'>ON</button>
+        <button type="button" class="btn btn-default"  id='X'>OFF</button>
+        <button type="button" class="btn btn-default"  id='L'>LCD</button>
+
+        <button type="button" class="btn btn-default"  id='A'>1</button>
+        <button type="button" class="btn btn-default"  id='B'>2</button>
+        <button type="button" class="btn btn-default"  id='C'>3</button>
+        <button type="button" class="btn btn-default"  id='D'>4</button>
+    </div>
 </body>
 </html>

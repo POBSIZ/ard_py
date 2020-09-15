@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <meta http-equiv="refresh" content="3">
 </head>
 <body>
     <div style="width:800px">
         <canvas id="myChart"></canvas>
     </div>
-    
+    <button>SHOW</button>
+    <script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $.get("/saveExcel", function(data, status){ });
+        });
+    });
+    </script>
+
     <script>
     // 우선 컨텍스트를 가져옵니다. 
     var ctx = document.getElementById("myChart").getContext('2d');
