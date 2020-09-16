@@ -8,17 +8,19 @@ body{
 #O{
     background-color: #2191FB;
     border: none;
+    text-align: center;
 }
 #O:hover{
-    background-color: #83BCA9;
+    background-color: #0f3457;
 }
 
 #X{
     background-color: #BA274A;
     border: none;
+    text-align: center;
 }
 #X:hover{
-    background-color: #83BCA9;
+    background-color: #6e182c;
 }
 
 button{
@@ -43,4 +45,8 @@ button:hover{
 } 
 
 .container{
+    position: relative;
+    top: 20px;
 }
+
+.main_container{}

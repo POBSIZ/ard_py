@@ -17,16 +17,33 @@
 </head>
 <body>
   <iframe id="chart" src="test.ejs"></iframe>
-    <div class="container">
-        <h2>Controll Test</h2>
-        <button type="button" class="btn btn-success" id='O'>ON</button>
-        <button type="button" class="btn btn-default" id='X'>OFF</button>
-        <button type="button" class="btn btn-default" id='L'>LCD</button>
+  <h2>Controll Pannel</h2>
+  <div class="main_container">
+    <button type="button" class="btn btn-success" id='O'>ON</button>
+    <button type="button" class="btn btn-default" id='X' style="display: none;">OFF</button>
+    <script>
+      var Off = document.querySelector('#X');
+      var On = document.querySelector('#O');
+      $(document).ready(function(){
+        $("#X").click(function(){
+          On.setAttribute('style', 'display: block;');
+          Off.setAttribute('style', 'display: none;');
+        });
 
-        <button type="button" class="btn btn-default" id='A'>1</button>
-        <button type="button" class="btn btn-default" id='B'>2</button>
-        <button type="button" class="btn btn-default" id='C'>3</button>
-        <button type="button" class="btn btn-default" id='D'>4</button>
-    </div>
+        $("#O").click(function(){
+          Off.setAttribute('style', 'display: block;');
+          On.setAttribute('style', 'display: none;');
+        });
+      }); 
+    </script>
+  </div>
+
+  <div class="container">
+    <button type="button" class="btn btn-default" id='L'>LCD</button>
+    <button type="button" class="btn btn-default" id='A'>1</button>
+    <button type="button" class="btn btn-default" id='B'>2</button>
+    <button type="button" class="btn btn-default" id='C'>3</button>
+    <button type="button" class="btn btn-default" id='D'>4</button>
+  </div>
 </body>
 </html>
