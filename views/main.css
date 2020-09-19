@@ -34,12 +34,14 @@ button{
 }
 button:hover{
     background-color: #83BCA9;
+    transition: .3s;
 }
 
 #chart{
+    margin-top: 100px;
     border: none;
-    height: 500px;
-    width: 900px;
+    width: 80vw;
+    height: 35vw;
     background-color: #83BCA9;
     border-radius: 40px 40px 40px 40px;
 } 
@@ -47,6 +49,18 @@ button:hover{
 .container{
     position: relative;
     top: 20px;
+}
+
+#header{
+    position: fixed;
+    background-color: #3E5641;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+a{
+    text-decoration: none;
+    color: #83BCA9;
 }
 
 .main_container{}
