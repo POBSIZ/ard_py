@@ -8,7 +8,7 @@
     <script>
       $(document).ready(function(){
         $("button").click(function(){
-          $.get("/controller/" + $(this).attr('id'), function(data, status){ });
+          $.get("/controller/" + $(this).attr('id'), function(data, status){ }).then();
         });
       });
       </script>
@@ -26,13 +26,13 @@
       var On = document.querySelector('#O');
       $(document).ready(function(){
         $("#X").click(function(){
-          On.setAttribute('style', 'display: block;');
           Off.setAttribute('style', 'display: none;');
+          On.setAttribute('style', 'display: inline;');
         });
 
         $("#O").click(function(){
-          Off.setAttribute('style', 'display: block;');
           On.setAttribute('style', 'display: none;');
+          Off.setAttribute('style', 'display: inline;');
         });
       }); 
     </script>
