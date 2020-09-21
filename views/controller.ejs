@@ -17,7 +17,35 @@
 </head>
 <body>
   <div id="header">
-    <a href="http://localhost:2393"><h1>SmartHome</h1></a>
+    <h1><a href="http://localhost:2393">SmartHome</a></h1>
+    <div id="nav">
+      <button id="nav_btn_on" style="display: inline;">menu</button>
+      <button id="nav_btn_off" style="display: none;">menu</button>
+      <ul id="main_menu" style="width: 0px; height: 0px; display: none; transition: .3s;">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+      <script>
+        var clck = document.querySelector('#main_menu');
+        var navOn = document.querySelector('#nav_btn_on');
+        var navOff = document.querySelector('#nav_btn_off');
+        $(document).ready(function(){
+          $("#nav_btn_on").click(function(){
+            navOn.setAttribute('style', 'display: none;');
+            navOff.setAttribute('style', 'display: inline;');
+            clck.setAttribute('style', 'width: 100px; height: 300px; display: block; transition: .3s;');
+          });
+
+          $("#nav_btn_off").click(function(){
+            navOn.setAttribute('style', 'display: inline;');
+            navOff.setAttribute('style', 'display: none;');
+            clck.setAttribute('style', 'width: 100px; height: 300px; display: none; transition: .3s;');
+          });
+        });
+      </script>
+    </div>
   </div>
 
   <iframe id="chart" src="test.ejs"></iframe>
@@ -89,5 +117,5 @@
     <div>Hi</div>
   </div> -->
   
-</body>
+  </body>
 </html>
