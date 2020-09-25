@@ -40,8 +40,8 @@ button:hover{
 #chart{
     margin-top: 100px;
     border: none;
-    width: 80vw;
-    height: 35vw;
+    width: 100%;
+    height: 45vw;
     background-color: #83BCA9;
     border-radius: 40px 40px 40px 40px;
 } 
@@ -51,7 +51,7 @@ button:hover{
     top: 20px;
 }
 
-#header{
+/* #header{
     position: fixed;
     background-color: #3E5641;
     top: 0;
@@ -82,49 +82,44 @@ ul{
     height: 300px;
     border-radius: 20px 20px 20px 20px;
     top: 50px;
-}
+}  */
 
 .main_container{}
 
 
 
-
-
-
-
-
-
-
-
-
 ul#menu{
+    z-index: 10;
     position:fixed;
     top:0;
+    left: 0;
     width:100%;
     height:3em;
     margin:0;
     padding:0 10px;
     background:#3E5641;
-    color:#eee;
+    color: white;
     box-shadow:0 -1px rgba(0,0,0,.5) inset;
-  }
-  
-  ul#menu > li{
+}
+
+ul#menu > li{
     float:left;
     list-style-type:none;
     position:relative;
-  }
-  
-  label{
+}
+
+label{
     position:relative;
     display:block;
     padding:0 18px 0 12px;
     line-height:3em;
     transition:background 0.3s;
     cursor:pointer;
-  }
-  
-  label:after{
+    border-radius: 20px 20px 20px 20px;
+}
+
+label:after{
+    color: white;
     content:"";
     position:absolute;
     display:block;
@@ -137,28 +132,36 @@ ul#menu{
     border-left:4px solid transparent;
     border-right:4px solid transparent;
     transition:border-bottom .1s, border-top .1s .1s;
-    }
+}
   
-  label:hover,
-  input:checked ~ label{background:rgba(0,0,0,.3);}
+label:hover,
+input:checked ~ label{
+    background:rgba(0,0,0,.3);
+    border-radius: 20px 20px 20px 20px;
+}
   
-  input:checked ~ label:after{
+input:checked ~ label:after{
+    color: white;
     border-top:0 solid rgba(255,255,255,.5);
     border-bottom:4px solid rgba(255,255,255,.5);
     transition:border-top .1s, border-bottom .1s .1s;
-  }
-  
-  /*hide the inputs*/
-  input{display:none}
-  
-  /*show the second levele menu of the selected voice*/
-  input:checked ~ ul.submenu{
-    max-height:300px;
+}
+
+/*hide the inputs*/
+input{display:none}
+
+/*show the second levele menu of the selected voice*/
+input:checked ~ ul.submenu{
+    max-height:500px; /* 서브메뉴 최대 height 결정*/
     transition:max-height 0.5s ease-in;
-  }
-  
-  /*style for the second level menu*/
-  ul.submenu{
+}
+
+/*style for the second level menu*/
+ul.submenu{
+    color: white;
+    z-index: 11;
+    height: 400px; /* 서브메뉴 height 결정*/
+    width: 300px; /* 서브메뉴 width 결정*/
     max-height:0;
     padding:0;
     overflow:hidden;
@@ -168,15 +171,16 @@ ul#menu{
     transition:max-height 0.5s ease-out;
     position:absolute;
     min-width:100%;
-  }
-  
-  ul.submenu li a{
+    border-radius: 20px 20px 20px 20px;
+}
+
+ul.submenu li a{
     display:block;
     padding:12px;
-    color:#ddd;
+    color: white;
     text-decoration:none;
     box-shadow:0 -1px rgba(0,0,0,.5) inset;
     transition:background .3s;
     white-space:nowrap;
-  }
+}
   
