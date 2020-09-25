@@ -38,10 +38,10 @@ button:hover{
 }
 
 #chart{
-    margin-top: 100px;
+    margin-top: 50px;
     border: none;
-    width: 100%;
-    height: 45vw;
+    width: 90%;
+    height: 37vw;
     background-color: #83BCA9;
     border-radius: 40px 40px 40px 40px;
 } 
@@ -87,6 +87,21 @@ ul{
 .main_container{}
 
 
+h1 a{
+    z-index: 100;
+    text-align: center;
+    margin: auto 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-right: 3%;
+    text-decoration: none;
+    color: white;
+}
+h1 a:hover{
+    color: #9dcfbe;
+    transition: 1s;
+}
 
 ul#menu{
     z-index: 10;
@@ -161,7 +176,7 @@ ul.submenu{
     color: white;
     z-index: 11;
     height: 400px; /* 서브메뉴 height 결정*/
-    width: 300px; /* 서브메뉴 width 결정*/
+    width: 60vw; /* 서브메뉴 width 결정*/
     max-height:0;
     padding:0;
     overflow:hidden;
@@ -183,4 +198,8 @@ ul.submenu li a{
     transition:background .3s;
     white-space:nowrap;
 }
+ul.submenu li a:hover{
+    background-color: #83BCA9;
+}
+
   

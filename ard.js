@@ -126,4 +126,5 @@ app.get('/clear_arr', (req, res)=>{
     na = new Array();
     nn = new Array();
     nt = new Array();
+    console.log("clear!")
 })
