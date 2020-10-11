@@ -1,4 +1,5 @@
 body{
+    outline: none;
     background-color: #282B28;
     color:white;
     border: none;
@@ -9,18 +10,22 @@ body{
     background-color: #2191FB;
     border: none;
     text-align: center;
+    transition: .3s;
 }
 #O:hover{
     background-color: #0f3457;
+    transition: .3s;
 }
 
 #X{
     background-color: #BA274A;
     border: none;
     text-align: center;
+    transition: .3s;
 }
 #X:hover{
     background-color: #6e182c;
+    transition: .3s;
 }
 
 button{
@@ -31,6 +36,7 @@ button{
     background-color: #3E5641;
     position: relative;
     border-radius: 40px 40px 40px 40px;
+    transition: .3s;
 }
 button:hover{
     background-color: #83BCA9;
@@ -97,10 +103,11 @@ h1 a{
     padding-right: 3%;
     text-decoration: none;
     color: white;
+    transition: .3s;
 }
 h1 a:hover{
     color: #9dcfbe;
-    transition: 1s;
+    transition: .3s;
 }
 
 ul#menu{
@@ -153,6 +160,7 @@ label:hover,
 input:checked ~ label{
     background:rgba(0,0,0,.3);
     border-radius: 20px 20px 20px 20px;
+    transition: .3s;
 }
   
 input:checked ~ label:after{
@@ -202,4 +210,6 @@ ul.submenu li a:hover{
     background-color: #83BCA9;
 }
 
-  
+*{
+    outline: none;
+}
